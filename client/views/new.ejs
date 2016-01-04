@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "UTF-8">
+		<title>New User</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		
+		<meta name = "description" content = "User Dashboard"/>
+		<meta name = "author" content = "Daniel Cleaves"/>
+		<link rel = "stylesheet" type= "text/css" href = "/css/bootstrap.css"/>
+	</head>
+	<body>
+			<div class = "container row-md-3">
+			<form action = '/new' method = 'post'>
+				<h1>Add a new user</h1>
+	  			<div class= ".navbar-form">
+	  				<div class = ".form-group">
+			   		<label for="name">Name:</label>
+			    		<input type="text" class="form-control" id="name" name = "name">
+			    	<label for="email">Email:</label>
+			    		<input type="email" class="form-control" id="email" name = "email">
+			    	<label for="color">Favorite Color:</label>
+			    		<input type="text" class="form-control" id="color" name = "color" />
+			  	</div>
+					<button type = 'submit' class= "btn btn-success" role='button'>New</button>
+				</div>
+
+			</form>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</body>
+</html>

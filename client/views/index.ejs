@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Dashboard</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+        <meta name = "description" content = "User Dashboard"/>
+        <meta name = "author" content = "Daniel Cleaves"/>
+        <link rel = "stylesheet" type= "text/css" href = "/css/bootstrap.css"/>
+    </head>
+
+    <body>
+            <div class = "container row-md-8">
+                <h2 class = "manage_users">Manage Users</h2>
+                <a class="btn btn-primary navbar-right" href='/new' role="button">Add New</a>
+
+                <table class = 'table table-bordered'>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Favorite Color</th>
+                        <th>Created_at</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (x in userinfo) { %>
+                    <tr>
+                        <td><a href = "/show/<%= userinfo[x]._id %>"><%= userinfo[x].name %></a></td>
+                        <td><%= userinfo[x].email %></td>
+                        <td><%= userinfo[x].color %></td>
+                        <td><%= userinfo[x].created_at %></td>
+                        <td><a href = "/edit/<%= userinfo[x]._id %>" > Edit | </a><a href = "/remove/<%= userinfo[x]._id %>" > Remove </a> </td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+
+        </div>
+        
+    </body>
+</html>
+    	
